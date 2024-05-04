@@ -13,7 +13,8 @@ import {
   Forget,
   Reset,
 
-  Dashboard,
+  Notification,
+  Home,
   Task,
   AddTask,
   Users
@@ -25,10 +26,10 @@ function App() {
     createRoutesFromElements(
       <Route path={"/"} element={<RouterLayout />}>
 
-        <Route path="/" element={<Dashboard />} />
+        <Route path="/" element={<Home />} />
         <Route path="/Task" element={<Task />} />
         <Route path="/addTask" element={<AddTask />} />
-        <Route path="/notification" element={<Notification />} />
+        <Route path="/notify" element={<Notification />} />
         <Route path="/users" element = {<Users />} />
 
         <Route path="/Login" element={<Login />} />

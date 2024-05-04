@@ -1,95 +1,113 @@
 import React from "react";
+import UpperNavbar from "../Navbar/UpperNavbar";
+import SideNavbar from "../Navbar/SideNavbar";
 
-const data = [
-  {
-    CustomerName: "John Doe",
-    ProjectName: "Alpha",
-    startDate: "05-01-24",
-    endDate: "07-01-24",
-    overDue: "1 day",
-    customerImage: "https://picsum.photos/50",
-  },
-  {
-    CustomerName: "Jane Smith",
-    ProjectName: "Beta",
-    startDate: "10-02-24",
-    endDate: "15-02-24",
-    overDue: "1 days",
-    customerImage: "https://picsum.photos/50",
-  },
-  {
-    CustomerName: "Alice Johnson",
-    ProjectName: "Gamma",
-    startDate: "20-03-24",
-    endDate: "25-03-24",
-    overDue: "1 days",
-    customerImage: "https://picsum.photos/50",
-  },
-  {
-    CustomerName: "John Doe",
-    ProjectName: "Alpha",
-    startDate: "05-01-24",
-    endDate: "07-01-24",
-    overDue: "1 day",
-    customerImage: "https://picsum.photos/50",
-  },
-  {
-    CustomerName: "Jane Smith",
-    ProjectName: "Beta",
-    startDate: "10-02-24",
-    endDate: "15-02-24",
-    overDue: "2 days",
-    customerImage: "https://picsum.photos/50",
-  },
-  {
-    CustomerName: "Alice Johnson",
-    ProjectName: "Gamma",
-    startDate: "20-03-24",
-    endDate: "25-03-24",
-    overDue: "3 days",
-    customerImage: "https://picsum.photos/50",
-  },
-  {
-    CustomerName: "Alice Johnson",
-    ProjectName: "Gamma",
-    startDate: "20-03-24",
-    endDate: "25-03-24",
-    overDue: "3 days",
-    customerImage: "https://picsum.photos/50",
-  },
-  {
-    CustomerName: "Alice Johnson",
-    ProjectName: "Gamma",
-    startDate: "20-03-24",
-    endDate: "25-03-24",
-    overDue: "3 days",
-    customerImage: "https://picsum.photos/50",
-  },
-  {
-    CustomerName: "Alice Johnson",
-    ProjectName: "Gamma",
-    startDate: "20-03-24",
-    endDate: "25-03-24",
-    overDue: "3 days",
-    customerImage: "https://picsum.photos/50",
-  },
-];
+
 
 const Users = () => {
-  return (
-    <div className="m-6 p-5 w-[950px] h-full bg-white rounded-xl border-[1.45px] border-[#4BCBEB] drop-shadow-md truncate">
-      <h1 className="m-4 font-bold text-2xl">Online User</h1>
 
-      <div className="ml-5 mb-5 flex space-x-20">
-        <h1 className="text-lg font-medium">Customer Name</h1>
-        <h1 className="text-lg font-medium">Project Name</h1>
-        <h1 className="text-lg font-medium">Start Date</h1>
-        <h1 className="text-lg font-medium">End Date</h1>
-        <h1 className="text-lg font-medium">Overdue day</h1>
+  const data = [
+    {
+      CustomerName: "John Doe",
+      ProjectName: "Alpha",
+      startDate: "05-01-24",
+      endDate: "07-01-24",
+      overDue: "1 day",
+      customerImage: "https://picsum.photos/50",
+    },
+    {
+      CustomerName: "Jane Smith",
+      ProjectName: "Beta",
+      startDate: "10-02-24",
+      endDate: "15-02-24",
+      overDue: "1 days",
+      customerImage: "https://picsum.photos/50",
+    },
+    {
+      CustomerName: "Alice Johnson",
+      ProjectName: "Gamma",
+      startDate: "20-03-24",
+      endDate: "25-03-24",
+      overDue: "1 days",
+      customerImage: "https://picsum.photos/50",
+    },
+    {
+      CustomerName: "John Doe",
+      ProjectName: "Alpha",
+      startDate: "05-01-24",
+      endDate: "07-01-24",
+      overDue: "1 day",
+      customerImage: "https://picsum.photos/50",
+    },
+    {
+      CustomerName: "Jane Smith",
+      ProjectName: "Beta",
+      startDate: "10-02-24",
+      endDate: "15-02-24",
+      overDue: "2 days",
+      customerImage: "https://picsum.photos/50",
+    },
+    {
+      CustomerName: "Alice Johnson",
+      ProjectName: "Gamma",
+      startDate: "20-03-24",
+      endDate: "25-03-24",
+      overDue: "3 days",
+      customerImage: "https://picsum.photos/50",
+    },
+    {
+      CustomerName: "Alice Johnson",
+      ProjectName: "Gamma",
+      startDate: "20-03-24",
+      endDate: "25-03-24",
+      overDue: "3 days",
+      customerImage: "https://picsum.photos/50",
+    },
+    {
+      CustomerName: "Alice Johnson",
+      ProjectName: "Gamma",
+      startDate: "20-03-24",
+      endDate: "25-03-24",
+      overDue: "3 days",
+      customerImage: "https://picsum.photos/50",
+    },
+    {
+      CustomerName: "Alice Johnson",
+      ProjectName: "Gamma",
+      startDate: "20-03-24",
+      endDate: "25-03-24",
+      overDue: "3 days",
+      customerImage: "https://picsum.photos/50",
+    },
+  ];
+
+  return (
+
+    <div className="min-h-screen w-screen bg-slate-200">
+      <UpperNavbar heading="Users"/>
+      <div className="w-full h-full flex">
+
+        <div id="left-navbar" className="w-[22%] h-full ">
+          <SideNavbar />
+        </div>
+
+        <div id="Right-Side" className="w-[78%] h-full flex justify-center my-20 bg-slate-200">
+          <div className="w-[90%] bg-white rounded border border-sky-400 px-6 py-4">
+          
+          {/* Actual Code */}
+          <div className="w-full h-full">
+      <h1 className="pb-10 font-bold text-2xl text-center">Online User</h1>
+
+      <div className="ml-5 mb-5 flex gap-[86px]">
+        <h1 className="text-md font-semibold">Customer Name</h1>
+        <h1 className="text-md font-semibold">Project Name</h1>
+        <h1 className="text-md font-semibold">Start Date</h1>
+        <h1 className="text-md font-semibold">End Date</h1>
+        <h1 className="text-md font-semibold">Overdue day</h1>
       </div>
       {data.map((item, index) => {
         return (
-          <div key={index} className="mb-3 py-3 flex border-b space-x-16">
+          <div key={index} className="mb-3 py-3 flex border-b space-x-[52px] items-center justify-between pr-4">
             <div className="ml-5 flex items-center space-x-2 w-[9rem]">
               <img
                 src={item.customerImage}
@@ -98,15 +116,15 @@ const Users = () => {
               />
               <div className="text-[#0B3B95]">{item.CustomerName}</div>
             </div>
-            <div className="px-5 w-32">{item.ProjectName}</div>
+            <div className="px-5 w-32 flex items-center">{item.ProjectName}</div>
             <div className="px-5 w-30">{item.startDate}</div>
             <div className="px-5 w-30">{item.endDate}</div>
-            <div className="w-32 flex items-center">
+            <div className="w-28 flex items-start justify-between px-2">
               {item.overDue}
               <svg
-                className="ml-5"
-                width="28"
-                height="28"
+                className=""
+                width="20"
+                height="20"
                 viewBox="0 0 32 32"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -121,6 +139,14 @@ const Users = () => {
         );
       })}
     </div>
+            
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    
   );
 };
 

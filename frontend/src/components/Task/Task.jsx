@@ -3,6 +3,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsisV } from "@fortawesome/free-solid-svg-icons";
 import { Modal } from "@mui/material";
 import MyTask from "./Addtask";
+
+import UpperNavbar from "../Navbar/UpperNavbar";
+import SideNavbar from "../Navbar/SideNavbar";
+
 const Task = () => {
   const [tasks, setTasks] = useState([
     {
@@ -63,8 +67,21 @@ const Task = () => {
   };
   const [openModal, setOpenModal] = useState(false);
   return (
-    <div className="h-full w-full">
-      <div className=" h-[25%] w-full">
+
+    <div className="min-h-screen w-screen bg-slate-200">
+      <UpperNavbar heading="Notifications"/>
+      <div className="w-full h-full flex">
+
+        <div id="left-navbar" className="w-[22%] h-full ">
+          <SideNavbar />
+        </div>
+
+        <div id="Right-Side" className="w-[78%] h-full flex justify-center my-20 bg-slate-200">
+          <div className="w-[90%] bg-white rounded border border-sky-400 px-6 py-4">
+
+            {/* Actual Code  */}
+          <div className="h-full w-full">
+      <div className="w-full">
         <div className="flex justify-between p-1">
           <div className="p-4 m-2 ">
             <h2 className=" text-xl pl-1  font-bold">Start date: </h2>
@@ -77,7 +94,7 @@ const Task = () => {
             ></input>
           </div>
           <div className=" p-4 m-2">
-            <h2 className=" text-xl pl-1  font-bold">End date: </h2>
+            <h2 className="text-xl pl-1  font-bold">End date: </h2>
             <input
               className=" w-[120%] pl-2 h-10 mt-4 rounded-lg"
               type="date"
@@ -126,17 +143,17 @@ const Task = () => {
                     alt="Attachment"
                     className="mt-2  h-40 w-80"
                   />
-                  <div className="flex  mt-3 space-x-[100px]">
+                  <div className="flex mt-3 justify-between">
                     <div className="flex flex-col">
-                      <div className="mb-2">
-                        <p className=" text-[20px] font-bold ">Start Date</p>
-                        <p className=" text-[16px] ">{task.startDate}</p>
+                      <div className="mb-2 space-y-2">
+                        <p className="text-md font-bold ">Start Date</p>
+                        <p className="text-sm">{task.startDate}</p>
                       </div>
                     </div>
                     <div className="flex flex-col">
-                      <div className="mb-2">
-                        <p className=" text-[20px] font-bold ">Start Date</p>
-                        <p className=" text-[16px] ">{task.startDate}</p>
+                      <div className="mb-2 space-y-2">
+                        <p className="text-md font-bold ">Start Date</p>
+                        <p className="text-sm">{task.startDate}</p>
                       </div>
                     </div>
                   </div>
@@ -200,6 +217,16 @@ const Task = () => {
         </div>
       </Modal>
     </div>
+            
+
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+
+    
   );
 };
 
