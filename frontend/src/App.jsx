@@ -9,26 +9,30 @@ import RouterLayout from "./RouterLayout.jsx";
 import "./App.css";
 import {
   Login,
+  Signup,
+  Forget,
+  Reset,
+
   Dashboard,
   Task,
   AddTask,
-  SignUp,
-  Firstpage,
-  Forget,
-  Reset,
+  Users
+  
 } from "./components";
 
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path={"/"} element={<RouterLayout />}>
+
         <Route path="/" element={<Dashboard />} />
+        <Route path="/Task" element={<Task />} />
+        <Route path="/addTask" element={<AddTask />} />
+        <Route path="/notification" element={<Notification />} />
+        <Route path="/users" element = {<Users />} />
+
         <Route path="/Login" element={<Login />} />
-        {/* <Route path="/Task" element={<Task />} /> */}
-        {/* <Route path="/addTask" element={<AddTask />} /> */}
-        <Route path="/SignUp" element={<SignUp />} />
-        {/* <Route path="/firstpage" element={<Firstpage />} /> */}
-        {/* <Route path="/notification" element={<Notification />} /> */}
+        <Route path="/Signup" element={<Signup />} />
         <Route path="/forget" element={<Forget />} />
         <Route path="/Reset" element={<Reset />} />
       </Route>

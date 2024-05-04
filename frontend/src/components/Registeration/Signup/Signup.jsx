@@ -1,5 +1,5 @@
 import { useFormik } from "formik";
-import { basicSchema } from "../schemas/index.js";
+import { basicSchema } from "../../../schemas/Login-Validation.js";
 import { Icon } from "react-icons-kit";
 import { eyeOff } from "react-icons-kit/feather/eyeOff";
 import { eye } from "react-icons-kit/feather/eye";
@@ -10,7 +10,7 @@ const onSubmit = async (values, actions) => {
   actions.resetForm();
 };
 
-function SignUp() {
+function Signup() {
   const [type, setType] = useState("password");
   const [icon, setIcon] = useState(eyeOff);
 
@@ -176,4 +176,4 @@ function SignUp() {
   );
 }
 
-export default SignUp;
+export default Signup;

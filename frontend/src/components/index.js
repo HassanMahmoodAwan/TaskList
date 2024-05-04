@@ -1,12 +1,16 @@
-import Login from "./Login/Login.jsx";
-import Dashboard from "./Dashboard/Dashboard.jsx";
+import Login from "./Registeration/Login/Login.jsx"
+import Signup from "./Registeration/Signup/Signup.jsx"
+import Forget from "./Registeration/Login/Forget.jsx"
+import Reset from "./Registeration/Login/Reset-pass.jsx"
+
+
+import Dashboard from "./Dashboard/TaskComponent/TaskComponent.jsx";
 import AddTask from "./Task/Addtask.jsx";
-import SignUp from "./signup/signUp.jsx";
-import Firstpage from "./Dashboard/Firstpage.jsx";
-import Notification from "./Dashboard/Notification.jsx";
-import Task from "./Dashboard/Task.jsx";
-import Forget from "./Login/forget.jsx";
-import Reset from "./Login/reset-pass.jsx";
+import Firstpage from "./Dashboard/FirstPage.jsx";
+import Notification from "./Dashboard/Notifications/Notification.jsx";
+import Task from "./Task/Task.jsx";
+import Users from "./Users/Users.jsx";
 
 
-export {Login, Dashboard,AddTask,SignUp,Firstpage,Notification,Forget,Reset,Task}
+
+export {Login, Dashboard, AddTask, Signup, Firstpage, Notification, Forget, Reset, Task, Users}

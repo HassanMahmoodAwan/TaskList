@@ -1,5 +1,5 @@
 import { useFormik } from "formik";
-import { basicSchema } from "../schemas/index.js";
+import { basicSchema } from "../../../schemas/Login-Validation.js";
 import { Icon } from "react-icons-kit";
 import { eyeOff } from "react-icons-kit/feather/eyeOff";
 import { eye } from "react-icons-kit/feather/eye";

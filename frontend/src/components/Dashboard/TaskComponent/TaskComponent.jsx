@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGreaterThan } from "@fortawesome/free-solid-svg-icons";
 // import Task from "../Task/task.jsx";
-import Task from "./Task.jsx";
-import Notification from "./Notification.jsx";
-import FirstPage from "./Firstpage.jsx";
-import Users from "./Users.jsx";
+import Task from "../../Task/Task.jsx";
+import Notification from "../Notifications/Notification.jsx";
+import FirstPage from "../FirstPage.jsx";
+import Users from "../../Users/Users.jsx";
 
 function TaskComponent() {
   return (
