@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { Line } from "react-chartjs-2";
 import { Chart, registerables } from "chart.js";
 Chart.register(...registerables);
-import Calendar from "react-calendar";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { DateCalendar } from "@mui/x-date-pickers/DateCalendar";
 
 import "react-calendar/dist/Calendar.css";
 
@@ -51,27 +53,27 @@ const Firstpage = () => {
             90/100
           </div>
           <div className="w-full bg-gray-200  h-5 mb-4 ">
-            <div className="bg-[#4BCBEB] h-4   w-4/5"></div>
+            <div className="bg-[#4BCBEB] h-5   w-4/5"></div>
           </div>
         </div>
 
         <div className=" bg-[#E2EFFC]  m-4 rounded-2xl p-4">
           <h1 className=" pb-3 font-medium">Completed Task</h1>
           <div className="mb-1 text-xl font-medium text-[#64748B] pb-2">
-            80/100
+            60/100
           </div>
           <div className="w-full bg-gray-200  h-5 mb-4">
-            <div className="bg-[#5CB85C] h-4  w-3/5"></div>
+            <div className="bg-[#5CB85C] h-5  w-3/5"></div>
           </div>
         </div>
 
         <div className=" bg-[#FBEDD2]  m-4 rounded-2xl p-4">
           <h1 className=" pb-3 font-medium">Pending Task</h1>
           <div className="mb-1 text-xl font-medium text-[#64748B] pb-2">
-            50/100
+            24/100
           </div>
-          <div className="w-full bg-gray-200  h-2.5 mb-4 ">
-            <div className="bg-[#F0AD4E] h-4   w-3/5"></div>
+          <div className="w-full bg-gray-200  h-5 mb-4 ">
+            <div className="bg-[#F0AD4E] h-5   w-2/5"></div>
           </div>
         </div>
 
@@ -79,10 +81,10 @@ const Firstpage = () => {
           <h1 className=" pb-3 font-medium"> Decline Task</h1>
           <div>
             <div className="mb-1 text-xl font-medium text-[#64748B] pb-2">
-              10/100
+              6/100
             </div>
             <div className="w-full bg-gray-200  h-5 mb-4 ">
-              <div className="bg-[#F0AD4E] h-4   w-1/5"></div>
+              <div className="bg-[#F0AD4E] h-5   w-1/5"></div>
             </div>
           </div>
         </div>
@@ -145,7 +147,10 @@ const Firstpage = () => {
 
         {/* Right Side */}
         <div className="flex-1 p-4 relative">
-          <Calendar className="w-full h-full" />
+          <LocalizationProvider dateAdapter={AdapterDayjs}>
+            <DateCalendar />
+          </LocalizationProvider>
+          {/* <Calendar className="w-full h-full" /> */}
         </div>
       </section>
     </div>

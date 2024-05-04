@@ -1,19 +1,20 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { Link } from "react-router-dom";
-import Firstpage from "./firstpage";
-import Notification from "./notification";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGreaterThan } from "@fortawesome/free-solid-svg-icons";
 // import Task from "../Task/task.jsx";
 import Task from "./Task.jsx";
+import Notification from "./Notification.jsx";
+import FirstPage from "./Firstpage.jsx";
+import Users from "./Users.jsx";
 
 function TaskComponent() {
   return (
-    <div className={"w-[100vw] h-screen bg-slate-100 flex"}>
+    <div className={"w-[100wh] h-screen bg-slate-100 flex"}>
       {/* Left-Side*/}
       <div
-        className={"w-[22%] h-full bg-white border-r-[1px] border-slate-200"}
+        className={"w-[22%] h-screen bg-white border-r-[1px] border-slate-200"}
       >
         <div
           className={
@@ -25,10 +26,10 @@ function TaskComponent() {
         </div>
 
         <div className="flex flex-col bg-white">
-          <p className="font-bold text-2xl pl-4 mt-3">Menu</p>
+          <p className="font-bold text-lg pl-8 mt-3">MENU</p>
           <div className="pl-4 mt-2">
-            <Link to="">
-              <div className="cursor-pointer hover:bg-gray-50 p-4 pl-4 pr-6 flex items-center shadow-md mb-3">
+            <Link to="/firstPage">
+              <div className="cursor-pointer hover:bg-gray-200 p-4 pl-4 pr-6 flex items-center mb-3">
                 <img
                   src="/layout-grid.svg"
                   alt="Image"
@@ -41,7 +42,7 @@ function TaskComponent() {
             </Link>
 
             <Link to="/user">
-              <div className="cursor-pointer hover:bg-gray-50 rounded-lg p-4 pl-4 pr-6 flex items-center shadow-md mb-3">
+              <div className="cursor-pointer hover:bg-gray-200 rounded-lg p-4 pl-4 pr-6 flex items-center mb-3">
                 <img
                   src="/user.svg"
                   alt="Image"
@@ -54,7 +55,7 @@ function TaskComponent() {
             </Link>
 
             <Link to="/Task">
-              <div className="cursor-pointer hover:bg-gray-50 rounded-lg p-4 pl-4 pr-6 flex items-center shadow-md mb-3">
+              <div className="cursor-pointer hover:bg-gray-200 rounded-lg p-4 pl-4 pr-6 flex items-center mb-3">
                 <img
                   src="/task_list.svg"
                   alt="Image"
@@ -66,8 +67,8 @@ function TaskComponent() {
               </div>
             </Link>
 
-            <Link to="/task1">
-              <div className="cursor-pointer hover:bg-gray-50 rounded-lg p-4 pl-4 pr-6 flex items-center shadow-md mb-3">
+            <Link to="/">
+              <div className="cursor-pointer hover:bg-gray-200 rounded-lg p-4 pl-4 pr-6 flex items-center mb-3">
                 <img
                   src="/Group.svg"
                   alt="Image"
@@ -112,11 +113,11 @@ function TaskComponent() {
         </div>
 
         {/*  Main Menu */}
-        <div className={"w-full h-[85%] flex flex-col"}>
+        <div className={" flex flex-col"}>
           <Routes>
-            {/* <Route path="/" element={<Firstpage />} /> */}
-            <Route path="/" element={<Task />} />
+            <Route path="/" element={<FirstPage />} />
             {/* <Route path="/notification" element={<Notification />} /> */}
+            {/* <Route path="/" element={<Users />} /> */}
             {/* <Route path="/" element={<Task />} /> */}
           </Routes>
         </div>

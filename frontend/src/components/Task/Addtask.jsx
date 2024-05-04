@@ -1,6 +1,6 @@
 import React from "react";
 
-const Task = () => {
+const AddTask = () => {
   return (
     <div class="max-w-lg mx-auto bg-white rounded overflow-hidden shadow-lg mt-10">
       <div class="px-6 py-4">
@@ -66,22 +66,9 @@ const Task = () => {
               <input
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="start-date"
-                type="text"
+                type="date"
                 placeholder="Select start date"
               />
-              <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
-                <svg
-                  class="fill-current h-4 w-4 text-gray-700"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-                  <path
-                    fill-rule="evenodd"
-                    d="M0 10a10 10 0 1120 0 10 10 0 01-20 0zm18 0a8 8 0 11-16 0 8 8 0 0116 0z"
-                  />
-                </svg>
-              </div>
             </div>
           </div>
           <div class="mb-4">
@@ -95,22 +82,9 @@ const Task = () => {
               <input
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="end-date"
-                type="text"
+                type="date"
                 placeholder="Select end date"
               />
-              <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
-                <svg
-                  class="fill-current h-4 w-4 text-gray-700"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-                  <path
-                    fill-rule="evenodd"
-                    d="M0 10a10 10 0 1120 0 10 10 0 01-20 0zm18 0a8 8 0 11-16 0 8 8 0 0116 0z"
-                  />
-                </svg>
-              </div>
             </div>
           </div>
           <div class="flex items-center justify-center">
@@ -127,4 +101,4 @@ const Task = () => {
   );
 };
 
-export default Task;
+export default AddTask;
